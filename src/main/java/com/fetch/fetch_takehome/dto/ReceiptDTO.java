@@ -1,17 +1,15 @@
 package com.fetch.fetch_takehome.dto;
 
 import lombok.Data;
-import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.List;
 
 @Data
-public class ReceiptDTO {
+public class ReceiptDTO { // BTW, these fields are all strings because it seems like in the JSON payload in the example, you use strings
 
     final private String retailer;
-    final private LocalDate purchaseDate;
-    final private LocalTime purchaseTime;
+    final private String purchaseDate;
+    final private String purchaseTime;
     final private List<ReceiptProductDTO> items;
-    final private Double total;
+    final private String total;
 
 }
