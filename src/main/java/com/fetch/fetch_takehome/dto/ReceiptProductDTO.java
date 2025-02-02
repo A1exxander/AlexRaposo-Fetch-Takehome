@@ -5,5 +5,5 @@ import lombok.Data;
 @Data
 public class ReceiptProductDTO {
     final private String shortDescription;
-    final private Double price;
+    final private String price;
 }
