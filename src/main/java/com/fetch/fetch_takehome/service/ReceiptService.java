@@ -26,14 +26,14 @@ public class ReceiptService implements iReceiptService {
     @Override
     public ReceiptPointsDTO getReceiptPoints(Integer ID) {
         Receipt receipt = receiptRepository.get(ID);
-        return receiptMapper.toReceiptPointsDTO(receipt.getPoints());
+        return (receipt == null) ? null : receiptMapper.toReceiptPointsDTO(receipt.getPoints());
     }
 
     @Override
     public ReceiptIDDTO saveReceipt(ReceiptDTO receiptDTO) {
         Receipt receipt = receiptMapper.toReceipt(receiptDTO);
         Integer receiptID = receiptRepository.save(receipt);
-        return receiptMapper.toReceiptIDDTO(receipt.getID());
+        return receiptMapper.toReceiptIDDTO(receiptID);
     }
 
 }
