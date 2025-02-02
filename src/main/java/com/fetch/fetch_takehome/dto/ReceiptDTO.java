@@ -12,6 +12,6 @@ public class ReceiptDTO {
     final private LocalDate purchaseDate;
     final private LocalTime purchaseTime;
     final private List<ReceiptProductDTO> items;
-    final private Integer total;
+    final private Double total;
 
 }
